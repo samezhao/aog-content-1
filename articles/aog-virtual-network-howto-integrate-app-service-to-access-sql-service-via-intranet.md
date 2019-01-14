@@ -1,6 +1,6 @@
 ---
-title: "虚拟网络 (VNET) 集成应用服务应用通过内网访问 Azure SQL 数据库服务"
-description: "虚拟网络 (VNET) 集成应用服务应用通过内网访问 Azure SQL 数据库服务"
+title: "应用服务 + 虚拟网络 (VNET) 集成 通过内网访问 Azure SQL 数据库服务"
+description: "应用服务 + 虚拟网络 (VNET) 集成 通过内网访问 Azure SQL 数据库服务"
 author: abulu
 resourceTags: 'Virtual Network, App Service, Azure SQL Database'
 ms.service: virtual-network
@@ -11,7 +11,7 @@ ms.date: 12/31/2018
 wacn.date: 12/31/2018
 ---
 
-# 虚拟网络 (VNET) 集成应用服务应用通过内网访问 Azure SQL 数据库服务
+# 应用服务 + 虚拟网络 (VNET) 集成 通过内网访问 Azure SQL 数据库服务
 
 在实际应用中，客户有 Web 应用访问 SQL 数据库的需求，而为了实现数据的安全访问，客户更希望从内网进行访问，而 Web 应用和 SQL 数据库作为 PaaS 资源，正常情况下都是通过公网进行访问的，针对客户希望从内网进行访问的这种需求，我们验证这个需求可以通过虚拟网路来集成应用程序应用，以及 Azure SQL 开通 **服务终结点** 的方式来实现。
 
