@@ -31,11 +31,11 @@ wacn.date: 12/26/2018
 
 6. 此为注册成功示例：
 
-    ![01](media/aog-virtual-machines-howto-confirm-registration-status-of-suse-linux-enterprise-server/01.jpg "01")
+    ![01](media/aog-virtual-machines-linux-howto-confirm-registration-status-of-suse-linux-enterprise-server/01.jpg "01")
 
 7. 此为未注册示例：
 
-    ![02](media/aog-virtual-machines-howto-confirm-registration-status-of-suse-linux-enterprise-server/02.jpg "02")
+    ![02](media/aog-virtual-machines-linux-howto-confirm-registration-status-of-suse-linux-enterprise-server/02.jpg "02")
 
 ## SUSE Linux Enterprise Server 12 系列和 15 系列
 

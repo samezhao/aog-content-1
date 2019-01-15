@@ -1,12 +1,12 @@
 ---
 title: "云服务配置虚拟网络和公共 IP"
 description: "云服务配置虚拟网络和公共 IP"
-author: Chen Zheng
+author: chenzheng1988
 resourceTags: 'Cloud Services, Virtual Network, Public IP'
 ms.service: cloud-services
 wacn.topic: aog
 ms.topic: article
-ms.author: Chen Zheng
+ms.author: v-ciwu
 ms.date: 12/25/2018
 wacn.date: 12/25/2018
 ---

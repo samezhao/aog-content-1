@@ -40,7 +40,7 @@ wacn.date: 12/25/2018
 
 7. 全部更新安装完毕后，使用 sysprep 准备虚拟机：
 
-    ![01](media/aog-virtual-machines-howto-create-windows-10-enterprise/01.jpg "01")
+    ![01](media/aog-virtual-machines-windows-howto-create-windows-10-enterprise/01.jpg "01")
 
 8. 当虚拟机关闭之后使用 PowerShell 命令转换 vhdx 文件并固定：
 
@@ -50,9 +50,9 @@ wacn.date: 12/25/2018
 
 9. 使用 Azure Storage Explorer 上传转换生成的 VHD 文件至目标存储账户的容器中：
 
-    ![02](media/aog-virtual-machines-howto-create-windows-10-enterprise/02.jpg "02")
+    ![02](media/aog-virtual-machines-windows-howto-create-windows-10-enterprise/02.jpg "02")
 
-    ![03](media/aog-virtual-machines-howto-create-windows-10-enterprise/03.jpg "03")
+    ![03](media/aog-virtual-machines-windows-howto-create-windows-10-enterprise/03.jpg "03")
 
 10. 根据实际需求，可以分别创建托管虚拟机和非托管磁盘虚拟机：
 
@@ -89,10 +89,10 @@ wacn.date: 12/25/2018
 
 11. 创建完成，验证，并激活 Windows 10：
 
-    ![04](media/aog-virtual-machines-howto-create-windows-10-enterprise/04.jpg "04")
+    ![04](media/aog-virtual-machines-windows-howto-create-windows-10-enterprise/04.jpg "04")
 
 ## 后续步骤
 
 如果在验证过程中 RDP 访问时提示用户被禁用，可以使用重置密码功能进行重置：
 
-![05](media/aog-virtual-machines-howto-create-windows-10-enterprise/05.jpg "05")
+![05](media/aog-virtual-machines-windows-howto-create-windows-10-enterprise/05.jpg "05")
