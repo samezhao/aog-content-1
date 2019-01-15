@@ -42,8 +42,8 @@ wacn.date: 12/31/2018
     ```
 
     > [!IMPORTANT]
-    > Pre-set maximums 中的 RX/TX 值为该网卡的 Buffer size 最大值；
-    > Current hardware settings 中 RX/TX 值代表该网卡当前的 Buffer size 大小。
+    > Pre-set maximums 中的 RX/TX 值为该网卡的 Buffer size 最大值；<br>
+    > Current hardware settings 中 RX/TX 值代表该网卡当前的 Buffer size 大小。<br>
     > 所以，设置的 Current hardware settings 的 RX/TX 值必须在 Pre-set maximums 的限制之内。
 
 2. 调整 RX/TX 参数：
