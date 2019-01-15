@@ -33,18 +33,18 @@ wacn.date: 12/31/2018
 ### 详细步骤
 
 > [!NOTE]
->请根据实际情况替换示例斜体参数。
+>请根据实际情况替换示例参数。
 
 1. 我们需要使用密钥保管库（Key Vault）来存储磁盘加密密钥，密钥保管库需要与待加密虚拟机位于同一区域（location），使用如下命令创建密钥保管库：
 
     ```azurecli
-    az keyvault create --name mykeyvaultname --resource-group LinuxVM --location chinanorth --enabled-for-disk-encryption True
+    az keyvault create --name <mykeyvaultname> --resource-group <LinuxVM> --location <chinanorth> --enabled-for-disk-encryption True
     ```
 
 2. 创建密钥保管库密钥：
 
     ```azurecli
-    az keyvault key create --vault-name mykeyvaultname --name myKey --protection software
+    az keyvault key create --vault-name <mykeyvaultname> --name <myKey> --protection software
     ```
 
 3. 由于 Azure 磁盘加密将生成加密密钥并将其写入密钥保管库，在密钥保管库中管理加密密钥需要 Azure Active Directory 身份验证。我们可以使用以下命令获取 Azure Active Directory 服务主体 spin-id 和 password，并在后续加密中通过身份验证：
@@ -58,19 +58,19 @@ wacn.date: 12/31/2018
 4. 设置密钥保管库策略：
 
     ```azurecli
-    az keyvault set-policy --name mykeyvaultname --spn spin-id --key-permissions wrapKey --secret-permissions set
+    az keyvault set-policy --name <mykeyvaultname> --spn spin-id --key-permissions wrapKey --secret-permissions set
     ```
 
 5. 对虚拟机磁盘执行加密操作，需要加密所有磁盘使用参数 `all`，仅加密系统盘使用 `os`，仅加密数据盘使用 `data`：
 
     ```azurecli
-    az vm encryption enable --resource-group LinuxVM --name Ubuntu1604 --aad-client-id spin-id --aad-client-secret password --disk-encryption-keyvault mykeyvaultname --key-encryption-key myKey --volume-type all
+    az vm encryption enable --resource-group <LinuxVM> --name Ubuntu1604 --aad-client-id spin-id --aad-client-secret <password> --disk-encryption-keyvault <mykeyvaultname> --key-encryption-key <myKey> --volume-type <all>
     ```
 
 6. 检查虚拟机加密结果：
 
     ```azurecli
-    az vm encryption show --resource-group LinuxVM --name Ubuntu1604
+    az vm encryption show --resource-group <LinuxVM> --name <Ubuntu1604>
     ```
 
 ## 备份和还原操作
@@ -83,7 +83,9 @@ wacn.date: 12/31/2018
 
 ### 详细步骤
 
-1. 对于加密虚拟机，目前仅支持还原虚拟机操作。在 Azure 门户- Recovery Services 保管库- mykeyvaultname -备份项-备份项目中使用还原虚拟机：
+1. 对于加密虚拟机，目前仅支持还原虚拟机操作，请参考文档[备份和还原 VM 时的限制](https://docs.azure.cn/zh-cn/backup/backup-azure-arm-vms-prepare#limitations-when-backing-up-and-restoring-a-vm)。
+
+    在 Azure 门户 - Recovery Services 保管库 - mykeyvaultname - 备份项 - 备份项目中使用还原虚拟机：
 
     ![01](media/aog-virtual-machines-linux-howto-encrypt-and-backup-restore-linux-virtual-machines/01.jpg "01")
 
