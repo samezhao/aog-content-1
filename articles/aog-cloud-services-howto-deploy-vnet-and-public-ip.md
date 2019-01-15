@@ -1,8 +1,8 @@
 ---
-title: "云服务配置虚拟网络和公共 IP"
-description: "云服务配置虚拟网络和公共 IP"
+title: "云服务配置虚拟网络和实例层级公共 IP"
+description: "云服务配置虚拟网络和实例层级公共 IP"
 author: chenzheng1988
-resourceTags: 'Cloud Services, Virtual Network, Public IP'
+resourceTags: 'Cloud Services, Virtual Network, ILPIP'
 ms.service: cloud-services
 wacn.topic: aog
 ms.topic: article
@@ -11,11 +11,11 @@ ms.date: 12/25/2018
 wacn.date: 12/25/2018
 ---
 
-# 云服务配置虚拟网络和公共 IP
+# 云服务配置虚拟网络和实例层级公共 IP
 
 用户将应用迁移至 Azure 云服务时，很重要的一点考率是保证服务的安全性，在 Azure 上，保护应用程序资源的最佳实践就是创建虚拟机网络和子网。
 
-用户在创建云服务时会生成一个 Virtual IP Address (VIP)，而 VIP 是被云服务后端所有的机器共享， 如果用户想要能够通过特定的IP访问云服务中的某个实例，可以为经典云服务的实例请求 ILPIP。
+用户在创建云服务时会生成一个 Virtual IP Address (VIP)，而 VIP 是被云服务后端所有的机器共享， 如果用户想要能够通过特定的IP访问云服务中的某个实例，可以为经典云服务的实例请求实例层级公共 IP (下文简称 ILPIP)。
 
 本文介绍了如何为经典云服务配置虚拟网络、配置 ILPIP 以及在配置过程中的注意事项:
 
@@ -48,9 +48,9 @@ wacn.date: 12/25/2018
 
 创建经典虚拟机网络请参考：[使用 Azure 门户创建虚拟网络（经典）](https://docs.azure.cn/zh-cn/virtual-network/virtual-networks-create-vnet-classic-pportal)。
 
-## 经典云服务配置公共 IP
+## 经典云服务配置 ILPIP
 
-可以通过以下方式配置 ILPIP，上传到云服务后系统会自动创建 ILPIP，只能为每个 经典云服务角色实例分配一个 ILPIP，每个订阅最多可使用 5 个 ILPIP。
+可以通过以下方式配置 ILPIP，上传到云服务后系统会自动创建 ILPIP，只能为每个经典云服务角色实例分配一个 ILPIP，每个订阅最多可使用 5 个 ILPIP。
 
 1. 下载云服务的 .cscfg 文件。
 
