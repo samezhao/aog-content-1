@@ -57,7 +57,7 @@ wacn.date: 01/09/2019
 
     ![03](media/aog-virtual-machines-windows-howto-add-new-secondary-replica-to-availability-group/03.png "03")
 
-## 在域控制器所在的机器中添加账号 CORP\SQLSvc3
+## 在域控制器所在的机器中添加域账号 CORP\SQLSvc3
 
 1. 连接到 ad-primary-dc 计算机，在“服务器管理器”中，选择“工具( Tools )”，单击 “Active Directory 管理中心( Active Directory Administrative Center )”。
 
